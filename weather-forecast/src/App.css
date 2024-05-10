@@ -34,3 +34,18 @@
 .section button:hover {
   background-color: #0056b3;
 }
+
+.raintomorrow {
+  background-color: #80DAEB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+}
+
+.result {
+  font-size: 3rem;
+  color: #0492c2;
+  font-weight: bold;
+}

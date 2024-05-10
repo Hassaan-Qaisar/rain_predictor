@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "./Rain.css";
+import { RainTomorrow } from "./RainTomorrow";
+import { NoRainTomorrow } from "./NoRainTomorrow";
+import { useNavigate } from "react-router-dom";
 
 export const Rain = () => {
+  const navigate = useNavigate();
+
   const [location, setLocation] = useState(0);
   const [minTemp, setMinTemp] = useState(0);
   const [maxTemp, setMaxTemp] = useState(0);
@@ -73,10 +78,20 @@ export const Rain = () => {
       .then((response) => response.json())
       .then((data) => {
         setPredictionResult(data.prediction[0]);
+        console.log(data.prediction[0]);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
+
+    if (predictionResult === "True") {
+      navigate("/rainTomorrow");
+      setPredictionResult(null);
+    }
+    if (predictionResult === "False") {
+      navigate("/noRainTomorrow");
+      setPredictionResult(null);
+    }
   };
 
   return (
@@ -383,14 +398,12 @@ export const Rain = () => {
             <option value={0}>No</option>
           </select>
         </div>
-
         <div className="form-section">
-          <button className="buttonClass" type="submit">Submit</button>
+          <button className="buttonClass" type="submit">
+            Submit
+          </button>
         </div>
       </form>
-      {
-        predictionResult === "True" ? (<p className="result">It will rain tomorrow.</p> ) : (<p className="result">It will not rain tomorrow.</p>)
-      }
     </div>
   );
 };
