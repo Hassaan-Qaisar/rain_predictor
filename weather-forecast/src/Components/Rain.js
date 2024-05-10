@@ -307,7 +307,7 @@ export const Rain = () => {
           />
         </div>
         <div className="form-section">
-          <label htmlFor="pressure9am">Pressiure (9 AM):</label>
+          <label htmlFor="pressure9am">Pressure (9 AM):</label>
           <input
             type="float"
             id="pressure9am"
@@ -316,7 +316,7 @@ export const Rain = () => {
           />
         </div>
         <div className="form-section">
-          <label htmlFor="pressure3pm">Pressiure (3 PM):</label>
+          <label htmlFor="pressure3pm">Pressure (3 PM):</label>
           <input
             type="float"
             id="pressure3pm"
