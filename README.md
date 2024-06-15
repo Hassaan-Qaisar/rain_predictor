@@ -7,9 +7,7 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Contributors](#contributors)
 
 ## Introduction
 
@@ -70,6 +68,7 @@ To explore the rain predictor model, open the Jupyter notebook in the `codes-plu
 ```bash
 cd codes-plus-dataset
 jupyter notebook rain_prediction_with_feature_scaling.ipynb
+```
 
 ### Time Series Analysis
 
